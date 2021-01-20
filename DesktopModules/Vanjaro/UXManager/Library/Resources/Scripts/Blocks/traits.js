@@ -1937,7 +1937,7 @@ export default (editor, config = {}) => {
 				model = component.findType(trait.attributes.selector)[0];
 
 			var text = model.getEl().textContent;
-			text = text.split(/\s+/).slice(0, 20).join(" ");
+			text = text.split(/\s+/).slice(0, 12).join(" ");
 			$(elInput).find('label').text(text);
 
 			if (component.attributes.type == 'button') {

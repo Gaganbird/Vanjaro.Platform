@@ -4311,6 +4311,153 @@
       "Sass": ""
     },
     {
+      "Guid": "d37e7a18-f53d-4ef6-9910-67adc181475c",
+      "Category": "Styles: Text",
+      "Title": "Style B",
+      "Controls": [
+        {
+          "Options": [
+            {
+              "100": "Thin"
+            },
+            {
+              "300": "Light"
+            },
+            {
+              "400": "Normal"
+            },
+            {
+              "500": "Medium"
+            },
+            {
+              "700": "Bold"
+            },
+            {
+              "900": "Ultra Bold"
+            }
+          ],
+          "Guid": "c7d7bdce-edb5-4e8e-ba0e-b940b30cab98",
+          "Title": "Font Weight",
+          "DefaultValue": "100",
+          "Suffix": "",
+          "CustomCSS": ".paragraph-style-2 {\n    font-weight: $psTwoFontWeight;\n}",
+          "PreviewCSS": ".paragraph-style-2 {\n    font-weight: $psTwoFontWeight;\n}",
+          "LessVariable": "$psTwoFontWeight",
+          "JavascriptVariable": "",
+          "Type": "Dropdown"
+        },
+        {
+          "Guid": "26bf7786-d913-48e5-9ed0-2300881a7eeb",
+          "Title": "Font Family",
+          "DefaultValue": "Poppins, sans-serif",
+          "Suffix": "",
+          "CustomCSS": ".paragraph-style-2 {\n    font-family: $psTwoFontFamily;\n}",
+          "PreviewCSS": ".paragraph-style-2 {\n    font-family: $psTwoFontFamily;\n}",
+          "LessVariable": "$psTwoFontFamily",
+          "JavascriptVariable": null,
+          "Type": "Fonts"
+        },
+        {
+          "Options": [
+            {
+              "normal": "normal"
+            },
+            {
+              "italic": "italic"
+            }
+          ],
+          "Guid": "121fdb8f-ac7a-4141-93fc-2de96ce1b53e",
+          "Title": "Font Style",
+          "DefaultValue": "normal",
+          "Suffix": "",
+          "CustomCSS": ".paragraph-style-2 {\n    font-style: $psTwoFontStyle;\n}",
+          "PreviewCSS": ".paragraph-style-2 {\n    font-style: $psTwoFontStyle;\n}",
+          "LessVariable": "$psTwoFontStyle",
+          "JavascriptVariable": "",
+          "Type": "Dropdown"
+        },
+        {
+          "RangeMin": 0.0,
+          "RangeMax": 25.0,
+          "Increment": 1.0,
+          "Guid": "f1d3a84f-91b1-491f-ae65-ec0435a1b5f2",
+          "Title": "Letter Spacing",
+          "DefaultValue": "0",
+          "Suffix": "px",
+          "CustomCSS": ".paragraph-style-2 {\n    letter-spacing: $psTwoLetterSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-2 {\n    letter-spacing: $psTwoLetterSpacingpx;\n}",
+          "LessVariable": "$psTwoLetterSpacing",
+          "JavascriptVariable": "",
+          "Type": "Slider"
+        },
+        {
+          "RangeMin": 0.0,
+          "RangeMax": 25.0,
+          "Increment": 1.0,
+          "Guid": "e4707425-6289-4938-90ad-1ddf5a7c0602",
+          "Title": "Word Spacing",
+          "DefaultValue": "0",
+          "Suffix": "px",
+          "CustomCSS": ".paragraph-style-2 {\n    word-spacing: $psTwoWordSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-2 {\n    word-spacing: $psTwoWordSpacingpx;\n}",
+          "LessVariable": "$psTwoWordSpacing",
+          "JavascriptVariable": null,
+          "Type": "Slider"
+        },
+        {
+          "Options": [
+            {
+              "none": "none"
+            },
+            {
+              "uppercase": "uppercase"
+            },
+            {
+              "lowercase": "lowercase"
+            },
+            {
+              "capitalize": "capitalize"
+            }
+          ],
+          "Guid": "1ac68813-e0b5-4304-9091-957b5e407f13",
+          "Title": "Text Transform",
+          "DefaultValue": "none",
+          "Suffix": "",
+          "CustomCSS": ".paragraph-style-2 {\n    text-transform: $psTwoTextTransform;\n}",
+          "PreviewCSS": ".paragraph-style-2 {\n    text-transform: $psTwoTextTransform;\n}",
+          "LessVariable": "$psTwoTextTransform",
+          "JavascriptVariable": null,
+          "Type": "Dropdown"
+        },
+        {
+          "Options": [
+            {
+              "none": "none"
+            },
+            {
+              "underline": "underline"
+            },
+            {
+              "overline": "overline"
+            },
+            {
+              "line-through": "Strikethrough"
+            }
+          ],
+          "Guid": "8db1198d-1bc2-41f2-89f3-869d21fda63a",
+          "Title": "Text Decoration",
+          "DefaultValue": "none",
+          "Suffix": "",
+          "CustomCSS": ".paragraph-style-2 {\n    text-decoration: $psTwoTextDecoration;\n}",
+          "PreviewCSS": ".paragraph-style-2 {\n    text-decoration: $psTwoTextDecoration;\n}",
+          "LessVariable": "$psTwoTextDecoration",
+          "JavascriptVariable": "",
+          "Type": "Dropdown"
+        }
+      ],
+      "Sass": ""
+    },
+    {
       "Guid": "0e590421-88c1-47fc-bf07-afb1debb733e",
       "Category": "Styles: Text",
       "Title": "Style B",
@@ -4340,9 +4487,9 @@
           "Title": "Font Weight",
           "DefaultValue": "700",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-2 {\n    font-weight: $psTwoFontWeight;\n}",
-          "PreviewCSS": ".paragraph-style-2 {\n    font-weight: $psTwoFontWeight;\n}",
-          "LessVariable": "$psTwoFontWeight",
+          "CustomCSS": ".paragraph-style-3 {\n    font-weight: $psThreeFontWeight;\n}",
+          "PreviewCSS": ".paragraph-style-3 {\n    font-weight: $psThreeFontWeight;\n}",
+          "LessVariable": "$psThreeFontWeight",
           "JavascriptVariable": "",
           "Type": "Dropdown"
         },
@@ -4351,9 +4498,9 @@
           "Title": "Font Family",
           "DefaultValue": "Poppins, sans-serif",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-2 {\n    font-family: $psTwoFontFamily;\n}",
-          "PreviewCSS": ".paragraph-style-2 {\n    font-family: $psTwoFontFamily;\n}",
-          "LessVariable": "$psTwoFontFamily",
+          "CustomCSS": ".paragraph-style-3 {\n    font-family: $psThreeFontFamily;\n}",
+          "PreviewCSS": ".paragraph-style-3 {\n    font-family: $psThreeFontFamily;\n}",
+          "LessVariable": "$psThreeFontFamily",
           "JavascriptVariable": null,
           "Type": "Fonts"
         },
@@ -4370,9 +4517,9 @@
           "Title": "Font Style",
           "DefaultValue": "normal",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-2 {\n    font-style: $psTwoFontStyle;\n}",
-          "PreviewCSS": ".paragraph-style-2 {\n    font-style: $psTwoFontStyle;\n}",
-          "LessVariable": "$psTwoFontStyle",
+          "CustomCSS": ".paragraph-style-3 {\n    font-style: $psThreeFontStyle;\n}",
+          "PreviewCSS": ".paragraph-style-3 {\n    font-style: $psThreeFontStyle;\n}",
+          "LessVariable": "$psThreeFontStyle",
           "JavascriptVariable": "",
           "Type": "Dropdown"
         },
@@ -4384,9 +4531,9 @@
           "Title": "Letter Spacing",
           "DefaultValue": "0",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-2 {\n    letter-spacing: $psTwoLetterSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-2 {\n    letter-spacing: $psTwoLetterSpacingpx;\n}",
-          "LessVariable": "$psTwoLetterSpacing",
+          "CustomCSS": ".paragraph-style-3 {\n    letter-spacing: $psThreeLetterSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-3 {\n    letter-spacing: $psThreeLetterSpacingpx;\n}",
+          "LessVariable": "$psThreeLetterSpacing",
           "JavascriptVariable": "",
           "Type": "Slider"
         },
@@ -4398,9 +4545,9 @@
           "Title": "Word Spacing",
           "DefaultValue": "0",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-2 {\n    word-spacing: $psTwoWordSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-2 {\n    word-spacing: $psTwoWordSpacingpx;\n}",
-          "LessVariable": "$psTwoWordSpacing",
+          "CustomCSS": ".paragraph-style-3 {\n    word-spacing: $psThreeWordSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-3 {\n    word-spacing: $psThreeWordSpacingpx;\n}",
+          "LessVariable": "$psThreeWordSpacing",
           "JavascriptVariable": null,
           "Type": "Slider"
         },
@@ -4423,9 +4570,9 @@
           "Title": "Text Transform",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-2 {\n    text-transform: $psTwoTextTransform;\n}",
-          "PreviewCSS": ".paragraph-style-2 {\n    text-transform: $psTwoTextTransform;\n}",
-          "LessVariable": "$psTwoTextTransform",
+          "CustomCSS": ".paragraph-style-3 {\n    text-transform: $psThreeTextTransform;\n}",
+          "PreviewCSS": ".paragraph-style-3 {\n    text-transform: $psThreeTextTransform;\n}",
+          "LessVariable": "$psThreeTextTransform",
           "JavascriptVariable": null,
           "Type": "Dropdown"
         },
@@ -4448,9 +4595,9 @@
           "Title": "Text Decoration",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-2 {\n    text-decoration: $psTwoTextDecoration;\n}",
-          "PreviewCSS": ".paragraph-style-2 {\n    text-decoration: $psTwoTextDecoration;\n}",
-          "LessVariable": "$psTwoTextDecoration",
+          "CustomCSS": ".paragraph-style-3 {\n    text-decoration: $psThreeTextDecoration;\n}",
+          "PreviewCSS": ".paragraph-style-3 {\n    text-decoration: $psThreeTextDecoration;\n}",
+          "LessVariable": "$psThreeTextDecoration",
           "JavascriptVariable": null,
           "Type": "Dropdown"
         }
@@ -4487,8 +4634,8 @@
           "Title": "Font Weight",
           "DefaultValue": "400",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-3 {\n    font-weight: $psThreeFontWeight;\n}",
-          "PreviewCSS": ".paragraph-style-3 {\n    font-weight: $psThreeFontWeight;\n}",
+          "CustomCSS": ".paragraph-style-4 {\n    font-weight: $psThreeFontWeight;\n}",
+          "PreviewCSS": ".paragraph-style-4 {\n    font-weight: $psThreeFontWeight;\n}",
           "LessVariable": "$psThreeFontWeight",
           "Type": "Dropdown"
         },
@@ -4497,8 +4644,8 @@
           "Title": "Font Family",
           "DefaultValue": "Poppins, sans-serif",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-3 {\n    font-family: $psThreeFontFamily;\n}",
-          "PreviewCSS": ".paragraph-style-3 {\n    font-family: $psThreeFontFamily;\n}",
+          "CustomCSS": ".paragraph-style-4 {\n    font-family: $psThreeFontFamily;\n}",
+          "PreviewCSS": ".paragraph-style-4 {\n    font-family: $psThreeFontFamily;\n}",
           "LessVariable": "$psThreeFontFamily",
           "Type": "Fonts"
         },
@@ -4515,8 +4662,8 @@
           "Title": "Font Style",
           "DefaultValue": "italic",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-3 {\n    font-style: $psoneFontStyle;\n}",
-          "PreviewCSS": ".paragraph-style-3 {\n    font-style: $psoneFontStyle;\n}",
+          "CustomCSS": ".paragraph-style-4 {\n    font-style: $psoneFontStyle;\n}",
+          "PreviewCSS": ".paragraph-style-4 {\n    font-style: $psoneFontStyle;\n}",
           "LessVariable": "$psoneFontStyle",
           "Type": "Dropdown"
         },
@@ -4528,8 +4675,8 @@
           "Title": "Letter Spacing",
           "DefaultValue": "0",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-3 {\n    letter-spacing: $psThreeLetterSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-3 {\n    letter-spacing: $psThreeLetterSpacingpx;\n}",
+          "CustomCSS": ".paragraph-style-4 {\n    letter-spacing: $psThreeLetterSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-4 {\n    letter-spacing: $psThreeLetterSpacingpx;\n}",
           "LessVariable": "$psThreeLetterSpacing",
           "Type": "Slider"
         },
@@ -4541,8 +4688,8 @@
           "Title": "Word Spacing",
           "DefaultValue": "0",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-3 {\n    word-spacing: $psThreeWordSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-3 {\n    word-spacing: $psThreeWordSpacingpx;\n}",
+          "CustomCSS": ".paragraph-style-4 {\n    word-spacing: $psThreeWordSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-4 {\n    word-spacing: $psThreeWordSpacingpx;\n}",
           "LessVariable": "$psThreeWordSpacing",
           "Type": "Slider"
         },
@@ -4565,9 +4712,9 @@
           "Title": "Text Transform",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-3 {\n    text-transform: $psThreeTextTransform;\n}",
-          "PreviewCSS": ".paragraph-style-3 {\n    text-transform: $psThreeTextTransform;\n}",
-          "LessVariable": "$psThreeTextTransform",
+          "CustomCSS": ".paragraph-style-4 {\n    text-transform: $psFourTextDecoration;\n}",
+          "PreviewCSS": ".paragraph-style-4 {\n    text-transform: $psFourTextDecoration;\n}",
+          "LessVariable": "$psFourTextDecoration",
           "Type": "Dropdown"
         },
         {
@@ -4589,8 +4736,8 @@
           "Title": "Text Decoration",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-3 {\n    text-decoration: $psThreeTextDecoration;\n}",
-          "PreviewCSS": ".paragraph-style-3 {\n    text-decoration: $psThreeTextDecoration;\n}",
+          "CustomCSS": ".paragraph-style-4 {\n    text-decoration: $psThreeTextDecoration;\n}",
+          "PreviewCSS": ".paragraph-style-4 {\n    text-decoration: $psThreeTextDecoration;\n}",
           "LessVariable": "$psThreeTextDecoration",
           "Type": "Dropdown"
         }
@@ -4627,8 +4774,8 @@
           "Title": "Font Weight",
           "DefaultValue": "400",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-4 {\n    font-weight: $psFourFontWeight;\n}",
-          "PreviewCSS": ".paragraph-style-4 {\n    font-weight: $psFourFontWeight;\n}",
+          "CustomCSS": ".paragraph-style-5 {\n    font-weight: $psFourFontWeight;\n}",
+          "PreviewCSS": ".paragraph-style-5 {\n    font-weight: $psFourFontWeight;\n}",
           "LessVariable": "$psFourFontWeight",
           "JavascriptVariable": null,
           "Type": "Dropdown"
@@ -4638,8 +4785,8 @@
           "Title": "Font Family",
           "DefaultValue": "Poppins, sans-serif",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-4 {\n    font-family: $psFourFontFamily;\n}",
-          "PreviewCSS": ".paragraph-style-4 {\n    font-family: $psFourFontFamily;\n}",
+          "CustomCSS": ".paragraph-style-5 {\n    font-family: $psFourFontFamily;\n}",
+          "PreviewCSS": ".paragraph-style-5 {\n    font-family: $psFourFontFamily;\n}",
           "LessVariable": "$psFourFontFamily",
           "JavascriptVariable": null,
           "Type": "Fonts"
@@ -4657,8 +4804,8 @@
           "Title": "Font Style",
           "DefaultValue": "normal",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-4 {\n    font-style: $psFourFontStyle;\n}",
-          "PreviewCSS": ".paragraph-style-4 {\n    font-style: $psFourFontStyle;\n}",
+          "CustomCSS": ".paragraph-style-5 {\n    font-style: $psFourFontStyle;\n}",
+          "PreviewCSS": ".paragraph-style-5 {\n    font-style: $psFourFontStyle;\n}",
           "LessVariable": "$psFourFontStyle",
           "JavascriptVariable": null,
           "Type": "Dropdown"
@@ -4669,10 +4816,10 @@
           "Increment": 1.0,
           "Guid": "e612dd89-3ed9-46dc-94ab-8081230d1deb",
           "Title": "Letter Spacing",
-          "DefaultValue": "5",
+          "DefaultValue": "2",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-4 {\n    letter-spacing: $psFourLetterSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-4 {\n    letter-spacing: $psFourLetterSpacingpx;\n}",
+          "CustomCSS": ".paragraph-style-5 {\n    letter-spacing: $psFourLetterSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-5 {\n    letter-spacing: $psFourLetterSpacingpx;\n}",
           "LessVariable": "$psFourLetterSpacing",
           "JavascriptVariable": "",
           "Type": "Slider"
@@ -4685,8 +4832,8 @@
           "Title": "Word Spacing",
           "DefaultValue": "0",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-4 {\n    word-spacing: $psFourWordSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-4 {\n    word-spacing: $psFourWordSpacingpx;\n}",
+          "CustomCSS": ".paragraph-style-5 {\n    word-spacing: $psFourWordSpacingpx;\n}",
+          "PreviewCSS": ".paragraph-style-5 {\n    word-spacing: $psFourWordSpacingpx;\n}",
           "LessVariable": "$psFourWordSpacing",
           "JavascriptVariable": null,
           "Type": "Slider"
@@ -4710,9 +4857,9 @@
           "Title": "Text Transform",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-4 {\n    text-transform: $psFourTextTransform;\n}",
-          "PreviewCSS": ".paragraph-style-4 {\n    text-transform: $psFourTextTransform;\n}",
-          "LessVariable": "$psFourTextTransform",
+          "CustomCSS": ".paragraph-style-5 {\n    text-transform: $psFiveTextDecoration;\n}",
+          "PreviewCSS": ".paragraph-style-5 {\n    text-transform: $psFiveTextDecoration;\n}",
+          "LessVariable": "$psFiveTextDecoration",
           "JavascriptVariable": null,
           "Type": "Dropdown"
         },
@@ -4735,8 +4882,8 @@
           "Title": "Text Decoration",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-4 {\n    text-decoration: $psFourTextDecoration;\n}",
-          "PreviewCSS": ".paragraph-style-4 {\n    text-decoration: $psFourTextDecoration;\n}",
+          "CustomCSS": ".paragraph-style-5 {\n    text-decoration: $psFourTextDecoration;\n}",
+          "PreviewCSS": ".paragraph-style-5 {\n    text-decoration: $psFourTextDecoration;\n}",
           "LessVariable": "$psFourTextDecoration",
           "JavascriptVariable": null,
           "Type": "Dropdown"
@@ -4774,8 +4921,8 @@
           "Title": "Font Weight",
           "DefaultValue": "400",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-5 {\n    font-weight: $psFiveFontWeight;\n}\n",
-          "PreviewCSS": ".paragraph-style-5 {\n    font-weight: $psFiveFontWeight;\n}\n",
+          "CustomCSS": ".paragraph-style-6 {\n    font-weight: $psFiveFontWeight;\n}\n",
+          "PreviewCSS": ".paragraph-style-6 {\n    font-weight: $psFiveFontWeight;\n}\n",
           "LessVariable": "$psFiveFontWeight",
           "JavascriptVariable": "",
           "Type": "Dropdown"
@@ -4785,8 +4932,8 @@
           "Title": "Font Family",
           "DefaultValue": "Poppins, sans-serif",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-5 {\n    font-family: $psFiveFontFamily;\n}\n",
-          "PreviewCSS": ".paragraph-style-5 {\n    font-family: $psFiveFontFamily;\n}\n",
+          "CustomCSS": ".paragraph-style-6 {\n    font-family: $psFiveFontFamily;\n}\n",
+          "PreviewCSS": ".paragraph-style-6 {\n    font-family: $psFiveFontFamily;\n}\n",
           "LessVariable": "$psFiveFontFamily",
           "JavascriptVariable": null,
           "Type": "Fonts"
@@ -4804,8 +4951,8 @@
           "Title": "Font Style",
           "DefaultValue": "normal",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-5 {\n    font-style: $psFiveFontStyle;\n}\n",
-          "PreviewCSS": ".paragraph-style-5 {\n    font-style: $psFiveFontStyle;\n}\n",
+          "CustomCSS": ".paragraph-style-6 {\n    font-style: $psFiveFontStyle;\n}\n",
+          "PreviewCSS": ".paragraph-style-6 {\n    font-style: $psFiveFontStyle;\n}\n",
           "LessVariable": "$psFiveFontStyle",
           "JavascriptVariable": "",
           "Type": "Dropdown"
@@ -4818,8 +4965,8 @@
           "Title": "Letter Spacing",
           "DefaultValue": "0",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-5 {\n    letter-spacing: $psFiveLetterSpacingpx;\n}\n",
-          "PreviewCSS": ".paragraph-style-5 {\n    letter-spacing: $psFiveLetterSpacingpx;\n}\n",
+          "CustomCSS": ".paragraph-style-6 {\n    letter-spacing: $psFiveLetterSpacingpx;\n}\n",
+          "PreviewCSS": ".paragraph-style-6 {\n    letter-spacing: $psFiveLetterSpacingpx;\n}\n",
           "LessVariable": "$psFiveLetterSpacing",
           "JavascriptVariable": null,
           "Type": "Slider"
@@ -4832,8 +4979,8 @@
           "Title": "Word Spacing",
           "DefaultValue": "0",
           "Suffix": "px",
-          "CustomCSS": ".paragraph-style-5 {\n    word-spacing: $psFiveWordSpacingpx;\n}\n",
-          "PreviewCSS": ".paragraph-style-5 {\n    word-spacing: $psFiveWordSpacingpx;\n}",
+          "CustomCSS": ".paragraph-style-6 {\n    word-spacing: $psFiveWordSpacingpx;\n}\n",
+          "PreviewCSS": ".paragraph-style-6 {\n    word-spacing: $psFiveWordSpacingpx;\n}",
           "LessVariable": "$psFiveWordSpacing",
           "JavascriptVariable": "",
           "Type": "Slider"
@@ -4857,8 +5004,8 @@
           "Title": "Text Transform",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-5 {\n    text-transform: $psFiveTextTransform;\n}",
-          "PreviewCSS": ".paragraph-style-5 {\n    text-transform: $psFiveTextTransform;\n}",
+          "CustomCSS": ".paragraph-style-6 {\n    text-transform: $psFiveTextTransform;\n}",
+          "PreviewCSS": ".paragraph-style-6 {\n    text-transform: $psFiveTextTransform;\n}",
           "LessVariable": "$psFiveTextTransform",
           "JavascriptVariable": "",
           "Type": "Dropdown"
@@ -4882,153 +5029,6 @@
           "Title": "Text Decoration",
           "DefaultValue": "none",
           "Suffix": "",
-          "CustomCSS": ".paragraph-style-5 {\n    text-decoration: $psFiveTextDecoration;\n}",
-          "PreviewCSS": ".paragraph-style-5 {\n    text-decoration: $psFiveTextDecoration;\n}",
-          "LessVariable": "$psFiveTextDecoration",
-          "JavascriptVariable": "",
-          "Type": "Dropdown"
-        }
-      ],
-      "Sass": ".paragraph-style-5 {\n  text-shadow: 2px 2px 2px #999999;\n}"
-    },
-    {
-      "Guid": "d37e7a18-f53d-4ef6-9910-67adc181475c",
-      "Category": "Styles: Text",
-      "Title": "Style F",
-      "Controls": [
-        {
-          "Options": [
-            {
-              "100": "Thin"
-            },
-            {
-              "300": "Light"
-            },
-            {
-              "400": "Normal"
-            },
-            {
-              "500": "Medium"
-            },
-            {
-              "700": "Bold"
-            },
-            {
-              "900": "Ultra Bold"
-            }
-          ],
-          "Guid": "c7d7bdce-edb5-4e8e-ba0e-b940b30cab98",
-          "Title": "Font Weight",
-          "DefaultValue": "400",
-          "Suffix": "",
-          "CustomCSS": ".paragraph-style-6 {\n    font-weight: $psSixFontWeight;\n}",
-          "PreviewCSS": ".paragraph-style-6 {\n    font-weight: $psSixFontWeight;\n}",
-          "LessVariable": "$psSixFontWeight",
-          "JavascriptVariable": "",
-          "Type": "Dropdown"
-        },
-        {
-          "Guid": "26bf7786-d913-48e5-9ed0-2300881a7eeb",
-          "Title": "Font Family",
-          "DefaultValue": "Poppins, sans-serif",
-          "Suffix": "",
-          "CustomCSS": ".paragraph-style-6 {\n    font-family: $psSixFontFamily;\n}",
-          "PreviewCSS": ".paragraph-style-6 {\n    font-family: $psSixFontFamily;\n}",
-          "LessVariable": "$psSixFontFamily",
-          "JavascriptVariable": null,
-          "Type": "Fonts"
-        },
-        {
-          "Options": [
-            {
-              "normal": "normal"
-            },
-            {
-              "italic": "italic"
-            }
-          ],
-          "Guid": "121fdb8f-ac7a-4141-93fc-2de96ce1b53e",
-          "Title": "Font Style",
-          "DefaultValue": "normal",
-          "Suffix": "",
-          "CustomCSS": ".paragraph-style-6 {\n    font-style: $psSixFontStyle;\n}",
-          "PreviewCSS": ".paragraph-style-6 {\n    font-style: $psSixFontStyle;\n}",
-          "LessVariable": "$psSixFontStyle",
-          "JavascriptVariable": "",
-          "Type": "Dropdown"
-        },
-        {
-          "RangeMin": 0.0,
-          "RangeMax": 25.0,
-          "Increment": 1.0,
-          "Guid": "f1d3a84f-91b1-491f-ae65-ec0435a1b5f2",
-          "Title": "Letter Spacing",
-          "DefaultValue": "0",
-          "Suffix": "px",
-          "CustomCSS": ".paragraph-style-6 {\n    letter-spacing: $psSixLetterSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-6 {\n    letter-spacing: $psSixLetterSpacingpx;\n}",
-          "LessVariable": "$psSixLetterSpacing",
-          "JavascriptVariable": "",
-          "Type": "Slider"
-        },
-        {
-          "RangeMin": 0.0,
-          "RangeMax": 25.0,
-          "Increment": 1.0,
-          "Guid": "e4707425-6289-4938-90ad-1ddf5a7c0602",
-          "Title": "Word Spacing",
-          "DefaultValue": "0",
-          "Suffix": "px",
-          "CustomCSS": ".paragraph-style-6 {\n    word-spacing: $psSixWordSpacingpx;\n}",
-          "PreviewCSS": ".paragraph-style-6 {\n    word-spacing: $psSixWordSpacingpx;\n}",
-          "LessVariable": "$psSixWordSpacing",
-          "JavascriptVariable": null,
-          "Type": "Slider"
-        },
-        {
-          "Options": [
-            {
-              "none": "none"
-            },
-            {
-              "uppercase": "uppercase"
-            },
-            {
-              "lowercase": "lowercase"
-            },
-            {
-              "capitalize": "capitalize"
-            }
-          ],
-          "Guid": "1ac68813-e0b5-4304-9091-957b5e407f13",
-          "Title": "Text Transform",
-          "DefaultValue": "none",
-          "Suffix": "",
-          "CustomCSS": ".paragraph-style-6 {\n    text-transform: $psSixTextTransform;\n}",
-          "PreviewCSS": ".paragraph-style-6 {\n    text-transform: $psSixTextTransform;\n}",
-          "LessVariable": "$psSixTextTransform",
-          "JavascriptVariable": null,
-          "Type": "Dropdown"
-        },
-        {
-          "Options": [
-            {
-              "none": "none"
-            },
-            {
-              "underline": "underline"
-            },
-            {
-              "overline": "overline"
-            },
-            {
-              "line-through": "Strikethrough"
-            }
-          ],
-          "Guid": "8db1198d-1bc2-41f2-89f3-869d21fda63a",
-          "Title": "Text Decoration",
-          "DefaultValue": "none",
-          "Suffix": "",
           "CustomCSS": ".paragraph-style-6 {\n    text-decoration: $psSixTextDecoration;\n}",
           "PreviewCSS": ".paragraph-style-6 {\n    text-decoration: $psSixTextDecoration;\n}",
           "LessVariable": "$psSixTextDecoration",
@@ -5036,8 +5036,9 @@
           "Type": "Dropdown"
         }
       ],
-      "Sass": ".paragraph-style-6 {\n  text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc, 1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #eee, 4px 3px 1px #ccc, 3px 4px 1px #eee, 5px 4px 1px #ccc;\n}"
+      "Sass": ".paragraph-style-6 {\n  text-shadow: 2px 2px 2px #999999;\n}"
     },
+
     {
       "Guid": "51c2398a-cb67-43fc-8082-ab253fd6f990",
       "Category": "Styles: Text",

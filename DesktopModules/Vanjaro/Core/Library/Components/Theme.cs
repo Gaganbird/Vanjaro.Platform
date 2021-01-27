@@ -84,7 +84,7 @@ namespace Vanjaro.Core.Components
             bool? hasScript = CacheFactory.Get(CacheKey);
             if (hasScript == null)
             {
-                if (File.Exists(System.Web.Hosting.HostingEnvironment.MapPath(ThemeJS)))
+                if (File.Exists(HttpContext.Current.Server.MapPath(ThemeJS)))
                     hasScript = true;
                 else
                     hasScript = false;

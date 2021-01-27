@@ -1903,7 +1903,7 @@ $(document).ready(function () {
                                         VjEditor.StyleManager.removeProperty(Responsive, 'flex-direction');
                                 }
 
-                                if (model.attributes.type == 'heading' || model.attributes.type == 'text' || model.attributes.type == 'button' || model.attributes.type == 'list' || model.attributes.type == 'link') {
+                                if (typeof VjEditor.StyleManager.getSector(Text) == 'undefined' && (model.attributes.type == 'heading' || model.attributes.type == 'text' || model.attributes.type == 'button' || model.attributes.type == 'list' || model.attributes.type == 'link')) {
 
                                     VjEditor.StyleManager.addSector(Text, {
                                         name: VjLocalized.Text,

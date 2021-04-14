@@ -157,18 +157,18 @@
 
 				if (this.attributes.automatically == 'automaticallyfalse') {
 					this.addAttributes({ 'data-bs-interval': 'false' });
-					$(this.getTrait('datainterval').el.closest('.gjs-trt-trait__wrp')).hide();
+					$(this.getTrait('datainterval').el.closest('.vj-trt-trait__wrp')).hide();
 				}
 				else {
 					this.addAttributes({ 'data-bs-interval': this.attributes.datainterval });
-					$(this.getTrait('datainterval').el.closest('.gjs-trt-trait__wrp')).show();
+					$(this.getTrait('datainterval').el.closest('.vj-trt-trait__wrp')).show();
 				}
 			},
 			ChangeInterval() {
 				this.addAttributes({ 'data-bs-interval': this.attributes.datainterval });
 			},
 			ChangeAnimation() {
-				$('.gjs-frame').contents().find('#' + this.getId()).carousel('dispose').carousel({ interval: false });
+				$('.vj-frame').contents().find('#' + this.getId()).carousel('dispose').carousel({ interval: false });
 			},
 			ChangeIndicators() {
 
@@ -733,7 +733,7 @@
             </div>`
 			);
 
-			$('.gjs-frame').contents().find('#' + Selected.getId()).carousel('dispose').carousel({ interval: false }).carousel(slideInner.components().models.length - 1);
+			$('.vj-frame').contents().find('#' + Selected.getId()).carousel('dispose').carousel({ interval: false }).carousel(slideInner.components().models.length - 1);
 
 			var Indicators = Selected.components().models.find(m => m.attributes.type == 'indicators');
 
@@ -773,7 +773,7 @@
 			const target = this.target;
 			var slider = target.closest('[data-gjs-type="carousel"]') || target.parent().closest('[data-gjs-type="carousel"]');
 
-			$('.gjs-frame').contents().find('#' + slider.getId()).carousel('dispose').carousel({ interval: false }).carousel(opts.slideIndex);
+			$('.vj-frame').contents().find('#' + slider.getId()).carousel('dispose').carousel({ interval: false }).carousel(opts.slideIndex);
 
 			setTimeout(function () {
 				$.each(getAllComponents(opts.slide), function (i, n) {
@@ -847,7 +847,7 @@
 			this.target = opts.target || editor.getSelected();
 			const target = this.target;
 
-			$('.gjs-frame').contents().find('#' + target.getId()).carousel('dispose').carousel({ interval: false }).carousel('prev');
+			$('.vj-frame').contents().find('#' + target.getId()).carousel('dispose').carousel({ interval: false }).carousel('prev');
 		}
 	});
 
@@ -858,7 +858,7 @@
 			this.target = opts.target || editor.getSelected();
 			const target = this.target;
 
-			$('.gjs-frame').contents().find('#' + target.getId()).carousel('dispose').carousel({ interval: false }).carousel('next');
+			$('.vj-frame').contents().find('#' + target.getId()).carousel('dispose').carousel({ interval: false }).carousel('next');
 		}
 	});
 }

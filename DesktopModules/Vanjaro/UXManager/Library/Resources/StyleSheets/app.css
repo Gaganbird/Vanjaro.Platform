@@ -7,8 +7,8 @@
     vertical-align: top;
 }
 
-#wrapper.gjs-comp-selected,
-#wrapper .gjs-comp-selected {
+#wrapper.vj-comp-selected,
+#wrapper .vj-comp-selected {
     outline: 1px solid #ccc !important;
     outline-offset: -1px !important;
 }
@@ -38,7 +38,7 @@
     background: #fff;
 }
 
-    .lockcanvas .gjs-frame, .deviceframe .gjs-frame {
+    .lockcanvas .vj-frame, .deviceframe .vj-frame {
         pointer-events: none !important;
     }
 

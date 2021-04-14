@@ -288,10 +288,10 @@
 
 						this.model.set({ "thumbnail": src });
 						$(this.model.getTrait("backgroundimage").el).css('background-image', 'url(' + src + ')');
-						$(this.model.getTrait("imageposition").el).parents(".gjs-trt-trait__wrp").show();
-						$(this.model.getTrait("imageattachment").el).parents(".gjs-trt-trait__wrp").show();
-						$(this.model.getTrait("imagerepeat").el).parents(".gjs-trt-trait__wrp").show();
-						$(this.model.getTrait("imagesize").el).parents(".gjs-trt-trait__wrp").show();
+						$(this.model.getTrait("imageposition").el).parents(".vj-trt-trait__wrp").show();
+						$(this.model.getTrait("imageattachment").el).parents(".vj-trt-trait__wrp").show();
+						$(this.model.getTrait("imagerepeat").el).parents(".vj-trt-trait__wrp").show();
+						$(this.model.getTrait("imagesize").el).parents(".vj-trt-trait__wrp").show();
 					}
 					else if (this.model.attributes.background == "video") {
 

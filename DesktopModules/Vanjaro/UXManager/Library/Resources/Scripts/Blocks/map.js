@@ -26,13 +26,13 @@
                 click: function () {
                     setTimeout(function () {
                         var MapTimeOutid;
-                        $('.traitsmanager .gjs-field-text input').on('keyup', function () {
+                        $('.traitsmanager .vj-field-text input').on('keyup', function () {
                             if (MapTimeOutid) {
                                 clearTimeout(MapTimeOutid);
                             }
                             MapTimeOutid = setTimeout(function () {
-                                $('.traitsmanager .gjs-field-select select').focus();
-                                $('.traitsmanager .gjs-field-text input').focus();
+                                $('.traitsmanager .vj-field-select select').focus();
+                                $('.traitsmanager .vj-field-text input').focus();
                             }, 500);
                         });
                     }, 500);

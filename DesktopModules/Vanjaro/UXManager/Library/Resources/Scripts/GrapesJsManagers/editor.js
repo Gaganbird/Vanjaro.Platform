@@ -139,7 +139,7 @@ $(document).ready(function () {
                             editor.StorageManager.getStorages().remote.attributes.params.Comment = $('#VJReviewComment', parent.document).val();
                             RunSaveCommand();
                             $('#VJBtnPublish').addClass('disabled');
-                            $('.gjs-cv-canvas__frames').addClass('lockcanvas');
+                            $('.vj-cv-canvas__frames').addClass('lockcanvas');
                             swal.close();
                             $.each(getAllComponents(), function (Index, component) {
                                 if (component.attributes.attributes["data-block-type"] == "global" && $(component.getEl()).find('.global-tools').length == 0)
@@ -189,9 +189,9 @@ $(document).ready(function () {
 
                     var size = sizes.shift();
 
-                    $('.gjs-frame').width(size).css('transition', 'none');
+                    $('.vj-frame').width(size).css('transition', 'none');
 
-                    waitForEl('.gjs-frame', size, function () {
+                    waitForEl('.vj-frame', size, function () {
 
                         //Calc Sizes
                         var imgEl = image.getEl();
@@ -223,7 +223,7 @@ $(document).ready(function () {
             }
             else {
 
-                $('.gjs-frame').removeAttr('style');
+                $('.vj-frame').removeAttr('style');
 
                 setTimeout(function () {
                     $('.vj-wrapper').find('.optimizing-overlay').remove();
@@ -240,10 +240,10 @@ $(document).ready(function () {
             if (!$('.optimizing-overlay').length)
                 $('.vj-wrapper').prepend('<div class="optimizing-overlay"><h1><img class="centerloader" src="' + VjDefaultPath + 'loading.svg" />Optimizing Images</h1></div>');
 
-            if ($('.gjs-frame').contents().find("html").hasClass('responsive'))
+            if ($('.vj-frame').contents().find("html").hasClass('responsive'))
                 $(".device-manager .device-view#Desktop").trigger("click");
 
-            waitForEl('.gjs-frame-wrapper', VjEditor.Canvas.getCanvasView().$el.innerWidth(), function () {
+            waitForEl('.vj-frame-wrapper', VjEditor.Canvas.getCanvasView().$el.innerWidth(), function () {
                 OptimizeImages(optImages, resolutionSizes.slice());
             });
 
@@ -382,6 +382,7 @@ $(document).ready(function () {
                             if (typeof LoadThemeBlocks != 'undefined')
                                 LoadThemeBlocks(grapesjs);
                             VjEditor = grapesjs.init({
+                                stylePrefix: 'vj-',
                                 protectedCss: '',
                                 allowScripts: 1,
                                 panels: {
@@ -1608,17 +1609,17 @@ $(document).ready(function () {
                                 }
 
                                 if ($(window).width() < 1000) {
-                                    $(window.parent.document.body).find('.gjs-cv-canvas__frames').addClass('deviceframe');
+                                    $(window.parent.document.body).find('.vj-cv-canvas__frames').addClass('deviceframe');
                                 }
 
                                 $(window).resize(function () {
                                     if ($(window).width() < 1000) {
-                                        $(window.parent.document.body).find('.gjs-cv-canvas__frames').addClass('deviceframe');
+                                        $(window.parent.document.body).find('.vj-cv-canvas__frames').addClass('deviceframe');
                                         $(".ToolbarItem li:not(.PageSettings),.toolmanager,.more_icons, .blockItem.blocksmenu ").hide();
                                         $("a.blockItem.settings").trigger("click");
                                     }
                                     else {
-                                        $(window.parent.document.body).find('.gjs-cv-canvas__frames').removeClass('deviceframe');
+                                        $(window.parent.document.body).find('.vj-cv-canvas__frames').removeClass('deviceframe');
                                         $(".ToolbarItem li,.toolmanager,.more_icons,.blockItem.blocksmenu ").show();
                                         $('.ToolbarItem > li:gt(4)').hide();
                                         $('.ntoolbox > li:lt(5)').hide();
@@ -1640,11 +1641,11 @@ $(document).ready(function () {
                                     $('#VJBtnPublish').addClass('disabled');
 
                                 if ((VJIsContentApproval == "True" && VJIsLocked == "True") && VJIsPageDraft == "False") {
-                                    $('.gjs-cv-canvas__frames').addClass('lockcanvas');
+                                    $('.vj-cv-canvas__frames').addClass('lockcanvas');
                                     $('#VJBtnPublish').addClass('disabled');
                                 }
                                 else
-                                    $('.gjs-cv-canvas__frames').removeClass('lockcanvas');
+                                    $('.vj-cv-canvas__frames').removeClass('lockcanvas');
 
                                 if (GetParameterByName('m2v', parent.window.location) != null && GetParameterByName('m2v', parent.window.location).startsWith('true') && (VJLandingPage.components == '' || VJLandingPage.components == '[]')) {
                                     VjEditor.runCommand("save");
@@ -1657,8 +1658,8 @@ $(document).ready(function () {
                                     setTimeout(function () { $($(window.parent.document.body).find('#dnn_ContentPane')[0]).find('.optimizing-overlay').remove(); }, 1000);
                                 }
 
-                                $('.gjs-frame').contents().find("#wrapper").scroll(function () {
-                                    var $tools = $('#gjs-cv-tools')
+                                $('.vj-frame').contents().find("#wrapper").scroll(function () {
+                                    var $tools = $('#vj-cv-tools')
                                     $tools.hide();
                                     clearTimeout($.data(this, 'scrollTimer'));
                                     $.data(this, 'scrollTimer', setTimeout(function () {
@@ -1975,7 +1976,7 @@ $(document).ready(function () {
                                     var slider = model.closest('[data-gjs-type="carousel"]');
                                     VjEditor.select(slider);
                                     var index = parseInt(model.getAttributes()['data-slide-to']);
-                                    $('.gjs-frame').contents().find('#' + slider.getId()).carousel('dispose').carousel({ interval: false }).carousel(index);
+                                    $('.vj-frame').contents().find('#' + slider.getId()).carousel('dispose').carousel({ interval: false }).carousel(index);
                                     return;
                                 }
                                 else if (model.attributes.type == 'column') {
@@ -2004,7 +2005,7 @@ $(document).ready(function () {
                                     });
                                 }
 
-                                $('.gjs-field-color-picker').on('show.spectrum', function () {
+                                $('.vj-field-color-picker').on('show.spectrum', function () {
 
                                     var stylemanager = this.closest('.stylemanager');
 
@@ -2022,9 +2023,9 @@ $(document).ready(function () {
                                         target = model.components().models[0];
 
                                     if (sm.getProperty(Extra, 'display').attributes.value == 'flex')
-                                        $('#gjs-sm-' + Flex).show();
+                                        $('#vj-sm-' + Flex).show();
                                     else
-                                        $('#gjs-sm-' + Flex).hide();
+                                        $('#vj-sm-' + Flex).hide();
 
                                     //Width
                                     var width = target.getStyle()['width'];
@@ -2053,9 +2054,9 @@ $(document).ready(function () {
                                         $(sm.getProperty(Size, 'width').view.$el.find('input')).val(parseInt($(target.getEl()).css('width')));
 
                                     if ($(sm.getProperty(Size, 'width').view.$el.find('input[type="text"]')).val() != "auto")
-                                        $(sm.getProperty(Size, 'width').view.$el).find('.gjs-sm-clear').show();
+                                        $(sm.getProperty(Size, 'width').view.$el).find('.vj-sm-clear').show();
                                     else
-                                        $(sm.getProperty(Size, 'width').view.$el).find('.gjs-sm-clear').hide();
+                                        $(sm.getProperty(Size, 'width').view.$el).find('.vj-sm-clear').hide();
 
                                     //Height
                                     var height = target.getStyle()['height'];
@@ -2085,9 +2086,9 @@ $(document).ready(function () {
 
 
                                     if ($(sm.getProperty(Size, 'height').view.$el.find('input[type="text"]')).val() != "auto")
-                                        $(sm.getProperty(Size, 'height').view.$el).find('.gjs-sm-clear').show();
+                                        $(sm.getProperty(Size, 'height').view.$el).find('.vj-sm-clear').show();
                                     else
-                                        $(sm.getProperty(Size, 'height').view.$el).find('.gjs-sm-clear').hide();
+                                        $(sm.getProperty(Size, 'height').view.$el).find('.vj-sm-clear').hide();
 
                                     //Min Width
                                     var minWidth = target.getStyle()['min-width'];
@@ -2098,9 +2099,9 @@ $(document).ready(function () {
                                         $(sm.getProperty(Size, 'min-width').view.$el.find('input')).val(parseInt(minWidth));
 
                                     if ($(sm.getProperty(Size, 'min-width').view.$el.find('input[type="text"]')).val() != "auto")
-                                        $(sm.getProperty(Size, 'min-width').view.$el).find('.gjs-sm-clear').show();
+                                        $(sm.getProperty(Size, 'min-width').view.$el).find('.vj-sm-clear').show();
                                     else
-                                        $(sm.getProperty(Size, 'min-width').view.$el).find('.gjs-sm-clear').hide();
+                                        $(sm.getProperty(Size, 'min-width').view.$el).find('.vj-sm-clear').hide();
 
                                     //Max Width
                                     var maxWidth = target.getStyle()['max-width'];
@@ -2111,9 +2112,9 @@ $(document).ready(function () {
                                         $(sm.getProperty(Size, 'max-width').view.$el.find('input')).val(parseInt(maxWidth));
 
                                     if ($(sm.getProperty(Size, 'max-width').view.$el.find('input[type="text"]')).val() != "auto")
-                                        $(sm.getProperty(Size, 'max-width').view.$el).find('.gjs-sm-clear').show();
+                                        $(sm.getProperty(Size, 'max-width').view.$el).find('.vj-sm-clear').show();
                                     else
-                                        $(sm.getProperty(Size, 'max-width').view.$el).find('.gjs-sm-clear').hide();
+                                        $(sm.getProperty(Size, 'max-width').view.$el).find('.vj-sm-clear').hide();
 
                                     //Min Height
                                     var minHeight = target.getStyle()['min-height'];
@@ -2124,9 +2125,9 @@ $(document).ready(function () {
                                         $(sm.getProperty(Size, 'min-height').view.$el.find('input')).val(parseInt(minHeight));
 
                                     if ($(sm.getProperty(Size, 'min-height').view.$el.find('input[type="text"]')).val() != "auto")
-                                        $(sm.getProperty(Size, 'min-height').view.$el).find('.gjs-sm-clear').show();
+                                        $(sm.getProperty(Size, 'min-height').view.$el).find('.vj-sm-clear').show();
                                     else
-                                        $(sm.getProperty(Size, 'min-height').view.$el).find('.gjs-sm-clear').hide();
+                                        $(sm.getProperty(Size, 'min-height').view.$el).find('.vj-sm-clear').hide();
 
                                     //Max Height
                                     var maxHeight = target.getStyle()['max-height'];
@@ -2137,9 +2138,9 @@ $(document).ready(function () {
                                         $(sm.getProperty(Size, 'max-height').view.$el.find('input')).val(parseInt(maxHeight));
 
                                     if ($(sm.getProperty(Size, 'max-height').view.$el.find('input[type="text"]')).val() != "auto")
-                                        $(sm.getProperty(Size, 'max-height').view.$el).find('.gjs-sm-clear').show();
+                                        $(sm.getProperty(Size, 'max-height').view.$el).find('.vj-sm-clear').show();
                                     else
-                                        $(sm.getProperty(Size, 'max-height').view.$el).find('.gjs-sm-clear').hide();
+                                        $(sm.getProperty(Size, 'max-height').view.$el).find('.vj-sm-clear').hide();
 
                                 });
 
@@ -2217,11 +2218,11 @@ $(document).ready(function () {
 
                                 if (model.attributes.traits.length <= 0) {
                                     $(".traitsmanager > .empty_msg").css({ "display": "block" });
-                                    $(".traitsmanager > .gjs-two-color").css({ "display": "none" });
+                                    $(".traitsmanager > .vj-two-color").css({ "display": "none" });
                                 }
                                 else {
                                     $(".traitsmanager > .empty_msg").css({ "display": "none" });
-                                    $(".traitsmanager > .gjs-two-color").css({ "display": "block" });
+                                    $(".traitsmanager > .vj-two-color").css({ "display": "block" });
                                 }
 
                                 if (model.attributes.type != 'wrapper')
@@ -2422,10 +2423,10 @@ $(document).ready(function () {
                                 else if (typeof VjEditor.StyleManager.getSector(Text) != 'undefined')
                                     VjEditor.StyleManager.removeSector(Text);
 
-                                $('.gjs-sm-sector').on('click', function () {
+                                $('.vj-sm-sector').on('click', function () {
                                     var $this = $(this);
                                     var sectorName = $this.attr('id').replace("gjs-sm-", "");
-                                    if ($this.find('.gjs-sm-properties').is(':visible')) {
+                                    if ($this.find('.vj-sm-properties').is(':visible')) {
                                         $.each(VjEditor.StyleManager.getSectors().models, function (index, model) {
                                             model.set('open', false);
                                         });
@@ -2436,7 +2437,7 @@ $(document).ready(function () {
                                 $(VjEditor.StyleManager.getSectors().models).each(function (index, value) {
                                     $(value.attributes.properties.models).each(function (subIndex, subValue) {
                                         if (subValue.attributes.type == "slider")
-                                            if ($(subValue.view.el).find('.gjs-field-integer input').val() == "auto" || $(subValue.view.el).find('.gjs-field-integer input').val() == "")
+                                            if ($(subValue.view.el).find('.vj-field-integer input').val() == "auto" || $(subValue.view.el).find('.vj-field-integer input').val() == "")
                                                 $(subValue.view.el).find('input[type="range"]').val(0);
                                     });
                                 });
@@ -2474,7 +2475,7 @@ $(document).ready(function () {
 
                             VjEditor.on('component:styleUpdate', (model, property) => {
 
-                                if (property == "color" && typeof event != "undefined" && $(event.target).parents(".gjs-sm-property.gjs-sm-color").length) {
+                                if (property == "color" && typeof event != "undefined" && $(event.target).parents(".vj-sm-property.vj-sm-color").length) {
                                     if (model.attributes.type == "heading" || model.attributes.type == "text" || model.attributes.type == "button" || model.attributes.type == "list") {
 
                                         var classes = model.getClasses();
@@ -2570,9 +2571,9 @@ $(document).ready(function () {
                             VjEditor.on('component:styleUpdate:display', (model, argument) => {
 
                                 if (event.target.value == 'flex')
-                                    $('#gjs-sm-' + Flex).show();
+                                    $('#vj-sm-' + Flex).show();
                                 else
-                                    $('#gjs-sm-' + Flex).hide();
+                                    $('#vj-sm-' + Flex).hide();
                             });
 
                             VjEditor.on('component:styleUpdate:border-position', (model, argument) => {
@@ -2868,9 +2869,9 @@ $(document).ready(function () {
                                         $('#VJBtnPublish').addClass('disabled');
 
                                     if (VJIsContentApproval == "True" && VJIsLocked == "True")
-                                        $('.gjs-cv-canvas__frames').addClass('lockcanvas');
+                                        $('.vj-cv-canvas__frames').addClass('lockcanvas');
                                     else
-                                        $('.gjs-cv-canvas__frames').removeClass('lockcanvas');
+                                        $('.vj-cv-canvas__frames').removeClass('lockcanvas');
 
                                     if (Data.PageReviewSettings.IsContentApproval)
                                         eval(Data.ReviewToastMarkup);
@@ -3026,7 +3027,7 @@ $(document).ready(function () {
             }
             if ($(window).width() < 1000) {
                 setTimeout(function () {
-                    $(window.parent.document.body).find('.gjs-cv-canvas__frames').addClass('deviceframe');
+                    $(window.parent.document.body).find('.vj-cv-canvas__frames').addClass('deviceframe');
                 }, 300);
             }
             $(this).find("em").addClass("fa-chevron-left").removeClass("fa-chevron-right");
@@ -3076,10 +3077,10 @@ $(document).ready(function () {
             $(this).parent().addClass('active');
             $('.traitsmanager').hide();
             $('.stylemanager').show();
-            $('.stylemanager .gjs-sm-sector').click(function () {
+            $('.stylemanager .vj-sm-sector').click(function () {
                 var $this = $(this);
                 var sectorName = $this.attr('id').replace("gjs-sm-", "");
-                if ($this.find('.gjs-sm-properties').is(':visible')) {
+                if ($this.find('.vj-sm-properties').is(':visible')) {
                     $.each(VjEditor.StyleManager.getSectors().models, function (index, model) {
                         model.set('open', false);
                     });
@@ -3136,8 +3137,8 @@ $(document).ready(function () {
     //$(".draft-btn").click(function (e) {
     //    $('#DeviceManager').hide();
 
-    //    if ($("#dnn_ContentPane").find(".gjs-frame").attr("style") == undefined)
-    //        $("#dnn_ContentPane").find(".gjs-cv-canvas").removeAttr("style");
+    //    if ($("#dnn_ContentPane").find(".vj-frame").attr("style") == undefined)
+    //        $("#dnn_ContentPane").find(".vj-cv-canvas").removeAttr("style");
 
     //    $('#SettingButton').slideToggle(100);
     //    e.stopPropagation();
@@ -3149,8 +3150,8 @@ $(document).ready(function () {
             return;
         }
         $('#DeviceManager,#LanguageManager').hide();
-        if ($("#dnn_ContentPane").find(".gjs-frame").attr("style") == undefined)
-            $("#dnn_ContentPane").find(".gjs-cv-canvas").removeAttr("style");
+        if ($("#dnn_ContentPane").find(".vj-frame").attr("style") == undefined)
+            $("#dnn_ContentPane").find(".vj-cv-canvas").removeAttr("style");
 
         $('#SettingButton,#DeviceManager,#LanguageManager,.ntoolbox').hide();
     });
@@ -3159,7 +3160,7 @@ $(document).ready(function () {
     $(".device-manager .device-view").click(function () {
         var $this = $(this);
         var $body = $('body');
-        var $iframe = $('.gjs-frame');
+        var $iframe = $('.vj-frame');
 
         $(".device-manager .device-view").removeClass("active");
         $this.addClass("active");
@@ -3468,7 +3469,7 @@ global.ConfirmReviewChange = function (FirstStateName) {
     },
         function (isConfirm) {
             if (isConfirm) {
-                $('.gjs-cv-canvas__frames').removeClass('lockcanvas');
+                $('.vj-cv-canvas__frames').removeClass('lockcanvas');
                 VJIsLocked = 'False';
                 $('.toast-close-button').click();
                 editor.StorageManager.getStorages().remote.attributes.params.IsPublished = false;

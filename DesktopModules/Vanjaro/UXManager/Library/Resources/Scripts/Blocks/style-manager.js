@@ -71,9 +71,9 @@
 			model.view.$el.find('input[value="' + value + '"]').prop('checked', true);
 
 			if (value == model.getDefaultValue())
-				$(this.$el).find('.gjs-sm-clear').hide();
+				$(this.$el).find('.vj-sm-clear').hide();
 			else
-				$(this.$el).find('.gjs-sm-clear').show();
+				$(this.$el).find('.vj-sm-clear').show();
 		},
 		clear() {
 
@@ -82,7 +82,7 @@
 			var property = model.attributes.property;
 			var defaultValue = model.getDefaultValue();
 
-			$(this.$el).find('.gjs-sm-clear').hide();
+			$(this.$el).find('.vj-sm-clear').hide();
 			model.view.$el.find('input').prop('checked', false);
 			model.view.$el.find('input[value="' + defaultValue + '"]').prop('checked', true);
 
@@ -229,7 +229,7 @@
 				style[propertyName] = properties;
 				Selected.setStyle(style);
 				Selected.set(property, event.target.value);
-				$(event.target).parents(".gjs-sm-property").find('.gjs-sm-clear').show();
+				$(event.target).parents(".vj-sm-property").find('.vj-sm-clear').show();
 			},
 			setValue(value) {
 				var model = this.model;
@@ -243,7 +243,7 @@
 				this.$el.find('input[type=number]').val(val);
 
 				if (value == "true")
-					this.$el.find('.gjs-sm-clear').css('display', 'inline-block');
+					this.$el.find('.vj-sm-clear').css('display', 'inline-block');
 
 			},
 			clear(ev) {
@@ -254,7 +254,7 @@
 
 				model.setValue(model.getDefaultValue());
 				$(this.$el).find('input').val(model.getDefaultValue());
-				$(this.$el).find('.gjs-sm-clear').hide();
+				$(this.$el).find('.vj-sm-clear').hide();
 
 				var string = $.trim(style[model.attributes.cssproperty]),
 					preString = this.model.attributes.property,
@@ -430,9 +430,9 @@
 			model.view.$el.find('select').val(unit);
 
 			if (value == model.getDefaultValue())
-				$(this.$el).find('.gjs-sm-clear').hide();
+				$(this.$el).find('.vj-sm-clear').hide();
 			else
-				$(this.$el).find('.gjs-sm-clear').show();
+				$(this.$el).find('.vj-sm-clear').show();
 
 		},
 		clear() {
@@ -442,7 +442,7 @@
 				value = model.getDefaultValue(),
 				unit = '';
 
-			$(this.$el).find('.gjs-sm-clear').hide();
+			$(this.$el).find('.vj-sm-clear').hide();
 
 			if (typeof model.attributes.unit != 'undefined') {
 

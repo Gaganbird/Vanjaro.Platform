@@ -84,8 +84,8 @@
         var variable = $('#' + id).attr('value');
         if (css != undefined && css != '') {
             css = css.split(variable).join($(e).val());
-            $(window.parent.document.body).find('.gjs-frame').contents().find('head').find('style[data-sass="' + id + '"]').remove();
-            $(window.parent.document.body).find('.gjs-frame').contents().find('head').append('<style pvcss="true" data-sass="' + id + '">' + css + '</style>');
+            $(window.parent.document.body).find('.vj-frame').contents().find('head').find('style[data-sass="' + id + '"]').remove();
+            $(window.parent.document.body).find('.vj-frame').contents().find('head').append('<style pvcss="true" data-sass="' + id + '">' + css + '</style>');
 
             $(window.parent.document.head).find('style[data-sass="' + id + '"]').remove();
             $(window.parent.document.head).append('<style pvcss="true" data-sass="' + id + '">' + css + '</style>');
@@ -93,19 +93,19 @@
         if (sass != undefined && sass != '') {
 
             var iframeexists = false;
-            $.each($(window.parent.document.body).find('.gjs-frame').contents().find('head>style'), function () {
-                if ($($(window.parent.document.body).find('.gjs-frame').contents().find('head>style')[0]).html() == sass)
+            $.each($(window.parent.document.body).find('.vj-frame').contents().find('head>style'), function () {
+                if ($($(window.parent.document.body).find('.vj-frame').contents().find('head>style')[0]).html() == sass)
                     iframeexists = true;
             });
 
             var exists = false;
-            $.each($(window.parent.document.body).find('.gjs-frame').contents().find('head>style'), function () {
-                if ($($(window.parent.document.body).find('.gjs-frame').contents().find('head>style')[0]).html() == sass)
+            $.each($(window.parent.document.body).find('.vj-frame').contents().find('head>style'), function () {
+                if ($($(window.parent.document.body).find('.vj-frame').contents().find('head>style')[0]).html() == sass)
                     exists = true;
             });
 
             if (!iframeexists)
-                $(window.parent.document.body).find('.gjs-frame').contents().find('head').append('<style pvcss="true">' + sass + '</style>');
+                $(window.parent.document.body).find('.vj-frame').contents().find('head').append('<style pvcss="true">' + sass + '</style>');
 
             if (!exists)
                 $(window.parent.document.head).append('<style pvcss="true">' + sass + '</style>');
@@ -253,7 +253,7 @@
     $scope.ResetTheme = function () {
         event.preventDefault();        
         $scope.ResetMarkUp($scope.ui.data.MarkUp.Value, null);
-        $(window.parent.document.body).find('.gjs-frame').contents().find('head').find('style[pvcss="true"]').remove();
+        $(window.parent.document.body).find('.vj-frame').contents().find('head').find('style[pvcss="true"]').remove();
         $(window.parent.document.head).find('style[pvcss="true"]').remove();
         $scope.HasChanges = false;
     };

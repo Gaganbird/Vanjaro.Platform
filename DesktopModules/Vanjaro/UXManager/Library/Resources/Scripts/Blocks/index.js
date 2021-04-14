@@ -200,7 +200,7 @@ export default grapesjs.plugins.add('vjpreset', (editor, opts = {}) => {
 							imageModel.set('src', response.Url);
 							var parentmodel = imageModel.parent();
 							ChangeToWebp(parentmodel, response.Urls);
-							$('.gjs-toolbar').hide();
+							$('.vj-toolbar').hide();
 							VjEditor.Modal.close();
 						}
 						$('.vj-wrapper').find('.optimizing-overlay').remove();
@@ -430,10 +430,10 @@ export default grapesjs.plugins.add('vjpreset', (editor, opts = {}) => {
 	var waitForChange = function (closed) {
 
 		if (closed) {
-			$(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').removeAttr('style');
+			$(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').removeAttr('style');
 		} else {
 			setTimeout(function () {
-				waitForChange($(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').is(":hidden"));
+				waitForChange($(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').is(":hidden"));
 			}, 10);
 		}
 	};
@@ -527,14 +527,14 @@ export default grapesjs.plugins.add('vjpreset', (editor, opts = {}) => {
 
 				AddCustomBlock(editor, CustomBlock);
 
-				waitForChange($(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').is(":hidden"));
+				waitForChange($(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').is(":hidden"));
 			};
 
-			$('.gjs-mdl-dialog .gjs-mdl-btn-close').click(function () {
-				$(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').removeAttr('style');
+			$('.vj-mdl-dialog .vj-mdl-btn-close').click(function () {
+				$(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').removeAttr('style');
 			});
 
-			$(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').css('max-width', 450);
+			$(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').css('max-width', 450);
 			editor.Modal.setTitle(VjLocalized.CustomBlock).setContent(modalContent).open();
 		}
 	});
@@ -631,15 +631,15 @@ export default grapesjs.plugins.add('vjpreset', (editor, opts = {}) => {
 
 				UpdateCustomBlock(editor, CustomBlock);
 
-				waitForChange($(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').is(":hidden"));
+				waitForChange($(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').is(":hidden"));
 					
 			};
 
-			$('.gjs-mdl-dialog .gjs-mdl-btn-close').click(function () {
-				$(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').removeAttr('style');
+			$('.vj-mdl-dialog .vj-mdl-btn-close').click(function () {
+				$(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').removeAttr('style');
 			});
 
-			$(editor.Modal.getContentEl()).parents('.gjs-mdl-dialog').css('max-width', 450);
+			$(editor.Modal.getContentEl()).parents('.vj-mdl-dialog').css('max-width', 450);
 			editor.Modal.setTitle(VjLocalized.CustomBlock).setContent(modalContent).open();
 
 			$('#ToggelBlockGlobal').addClass('disabled');

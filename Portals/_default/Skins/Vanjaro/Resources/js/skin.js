@@ -217,7 +217,7 @@ OpenPopUp = function (e, width, position, title, url, height, showtogglebtn, rem
                     $this.find("em").addClass("fa-chevron-right").removeClass("fa-chevron-left");
                     $modal.removeClass("modal-close").addClass('modal-open').css('width', '100%');
                     $(".modal-backdrop").removeClass("hide").addClass('show').css('width', '100vw');
-                    $('.gjs-cv-canvas__frames').css('pointer-events', 'all');
+                    $('.vj-cv-canvas__frames').css('pointer-events', 'all');
                 });
 
             }
@@ -227,7 +227,7 @@ OpenPopUp = function (e, width, position, title, url, height, showtogglebtn, rem
                     $this.find("em").addClass("fa-chevron-left").removeClass("fa-chevron-right");
                     $modal.addClass("modal-close").removeClass('modal-open');
                     $(".modal-backdrop").removeClass("show").addClass('hide').css('width', '0');
-                    $('.gjs-cv-canvas__frames').css('pointer-events', 'none');
+                    $('.vj-cv-canvas__frames').css('pointer-events', 'none');
                 });
             }
         });
@@ -292,7 +292,7 @@ OpenPopUp = function (e, width, position, title, url, height, showtogglebtn, rem
             }
             var appid = $(window.document.body).find('.uxmanager-modal').data('mid')
             var appdiv = "#dnn_vj_" + appid;
-            var $appframe = $('.gjs-frame').contents().find(appdiv).find("#Appframe");
+            var $appframe = $('.vj-frame').contents().find(appdiv).find("#Appframe");
 
             if ($appframe.length)
                 $appframe.prev().hide();
@@ -313,13 +313,13 @@ OpenPopUp = function (e, width, position, title, url, height, showtogglebtn, rem
     $(window.parent.document.body).find('[data-bs-dismiss="modal"]').on("click", function (e, reload) {
         if ($(window.document.body).find('.uxmanager-modal').data('edit') == 'edit_module') {
             var mid = $(window.document.body).find('.uxmanager-modal').data('mid');
-            if ($('.gjs-frame').contents().find('#dnn_vj_' + mid).length > 0) {
+            if ($('.vj-frame').contents().find('#dnn_vj_' + mid).length > 0) {
                 var framesrc = CurrentTabUrl;
                 if (framesrc.indexOf("?") == -1)
                     framesrc = framesrc + "?mid=" + mid + "&icp=true";
                 else
                     framesrc = framesrc + "&mid=" + mid + "&icp=true";
-                $('.gjs-frame').contents().find('#dnn_vj_' + mid).html("<img class=\"centerloader moduleloader\" src='" + VjDefaultPath + "loading.svg'><iframe id=\"Appframe\" scrolling=\"no\" onload=\"window.parent.RenderApp(this);\" src='" + framesrc + "' style=\"width:100%;height:auto;\"></iframe>");
+                $('.vj-frame').contents().find('#dnn_vj_' + mid).html("<img class=\"centerloader moduleloader\" src='" + VjDefaultPath + "loading.svg'><iframe id=\"Appframe\" scrolling=\"no\" onload=\"window.parent.RenderApp(this);\" src='" + framesrc + "' style=\"width:100%;height:auto;\"></iframe>");
             }
             else if (typeof reload == 'undefined' || reload)
                 window.parent.location.reload();

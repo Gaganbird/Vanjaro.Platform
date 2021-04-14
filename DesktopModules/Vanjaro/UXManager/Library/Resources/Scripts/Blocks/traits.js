@@ -866,24 +866,24 @@ export default (editor, config = {}) => {
 
 			if (component.attributes.type == 'list') {
 				if (elInput.firstElementChild.name == "ul_list_style" && component.getTrait('list_type').getInitValue() == "ol")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 				else if (elInput.firstElementChild.name == "ol_list_style" && component.getTrait('list_type').getInitValue() == "ul")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 				else if (elInput.firstElementChild.name == "start" && component.getTrait('list_type').getInitValue() == "ul")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 
 			if (component.attributes.type == 'icon') {
 				if (elInput.firstElementChild.name == "framestyle" && component.getTrait('frame').getInitValue() == "none")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 
 			if (component.attributes.type == 'section') {
 				if (elInput.firstElementChild.name == "gradienttype" && component.getTrait('background').getInitValue() != "gradient")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 
 				if (elInput.firstElementChild.name == "angle" && component.getTrait('gradienttype').getInitValue() == "radial")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 		},
 		eventCapture: ['input'],
@@ -899,16 +899,16 @@ export default (editor, config = {}) => {
 					style['padding-left'] = '40px';
 					component.setStyle(style);
 
-					$(component.getTrait("ul_list_style").el).parents(".gjs-trt-trait__wrp").hide();
-					$(component.getTrait("start").el).parents(".gjs-trt-trait__wrp").show();
-					$(component.getTrait("ol_list_style").el).parents(".gjs-trt-trait__wrp").show();
+					$(component.getTrait("ul_list_style").el).parents(".vj-trt-trait__wrp").hide();
+					$(component.getTrait("start").el).parents(".vj-trt-trait__wrp").show();
+					$(component.getTrait("ol_list_style").el).parents(".vj-trt-trait__wrp").show();
 					$(component.getTrait("ol_list_style").el).find("input:checked").prop('checked', false);
 					$(component.getTrait('ol_list_style').el).find('input#decimal').prop('checked', true);
 				}
 				else if (event.target.value == "ul") {
-					$(component.getTrait("ol_list_style").el).parents(".gjs-trt-trait__wrp").hide();
-					$(component.getTrait("start").el).parents(".gjs-trt-trait__wrp").hide();
-					$(component.getTrait("ul_list_style").el).parents(".gjs-trt-trait__wrp").show();
+					$(component.getTrait("ol_list_style").el).parents(".vj-trt-trait__wrp").hide();
+					$(component.getTrait("start").el).parents(".vj-trt-trait__wrp").hide();
+					$(component.getTrait("ul_list_style").el).parents(".vj-trt-trait__wrp").show();
 					$(component.getTrait("ul_list_style").el).find("input:checked").prop('checked', false);
 					$(component.getTrait('ul_list_style').el).find('input#disc').prop('checked', true);
 				}
@@ -918,27 +918,27 @@ export default (editor, config = {}) => {
 
 				if (event.target.name == "frame") {
 					if (event.target.value != "none") {
-						$(component.getTrait("framewidth").el).parents(".gjs-trt-trait__wrp").show();
-						$(component.getTrait("framegap").el).parents(".gjs-trt-trait__wrp").show();
-						$(component.getTrait("framestyle").el).parents(".gjs-trt-trait__wrp").show();
-						$(component.getTrait("framecolor").el).parents(".gjs-trt-trait__wrp").show();
+						$(component.getTrait("framewidth").el).parents(".vj-trt-trait__wrp").show();
+						$(component.getTrait("framegap").el).parents(".vj-trt-trait__wrp").show();
+						$(component.getTrait("framestyle").el).parents(".vj-trt-trait__wrp").show();
+						$(component.getTrait("framecolor").el).parents(".vj-trt-trait__wrp").show();
 						$(component.getTrait("framecolor").el).find("input#frame" + component.getTrait("framecolor").attributes.value).prop('checked', true).next().addClass('active');
 					}
 					else {
-						$(component.getTrait("framewidth").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("framegap").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("framestyle").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("framecolor").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("framewidth").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("framegap").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("framestyle").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("framecolor").el).parents(".vj-trt-trait__wrp").hide();
 					}
 				}
 
 				if (event.target.name == "background") {
 					if (event.target.value == "fill") {
-						$(component.getTrait("backgroundcolor").el).parents(".gjs-trt-trait__wrp").show();
+						$(component.getTrait("backgroundcolor").el).parents(".vj-trt-trait__wrp").show();
 						$(component.getTrait("backgroundcolor").el).find("input#color" + component.getTrait("backgroundcolor").attributes.value).prop('checked', true).next().addClass('active');
 					}
 					else {
-						$(component.getTrait("backgroundcolor").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundcolor").el).parents(".vj-trt-trait__wrp").hide();
 						$(component.getTrait("backgroundcolor").el).find("input:checked").prop('checked', false);
 						$(component.getTrait("backgroundcolor").el).find(".active").removeClass("active");
 					}
@@ -961,19 +961,19 @@ export default (editor, config = {}) => {
 						$(component.getTrait("imagerepeat").el).find("select").val("no-repeat");
 						$(component.getTrait("imagesize").el).find("select").val("auto");
 
-						$(component.getTrait("backgroundcolor").el).parents(".gjs-trt-trait__wrp").show();
-						$(component.getTrait("backgroundimage").el).parents(".gjs-trt-trait__wrp").show();
+						$(component.getTrait("backgroundcolor").el).parents(".vj-trt-trait__wrp").show();
+						$(component.getTrait("backgroundimage").el).parents(".vj-trt-trait__wrp").show();
 
-						$(component.getTrait("imageposition").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imageattachment").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagerepeat").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagesize").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("imageposition").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imageattachment").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagerepeat").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagesize").el).parents(".vj-trt-trait__wrp").hide();
 
-						$(component.getTrait("gradient").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("gradienttype").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("angle").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("gradient").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("gradienttype").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("angle").el).parents(".vj-trt-trait__wrp").hide();
 
-						$(component.getTrait("backgroundvideo").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundvideo").el).parents(".vj-trt-trait__wrp").hide();
 						component.components().forEach(item => item.getAttributes()["data-bg-video"] == 'true' ? item.remove() : null);
 
 						var style = component.getStyle();
@@ -986,18 +986,18 @@ export default (editor, config = {}) => {
 					}
 					else if (event.target.value == "gradient") {
 
-						$(component.getTrait("gradient").el).parents(".gjs-trt-trait__wrp").show();
-						$(component.getTrait("gradienttype").el).parents(".gjs-trt-trait__wrp").show();
-						$(component.getTrait("angle").el).parents(".gjs-trt-trait__wrp").show();
+						$(component.getTrait("gradient").el).parents(".vj-trt-trait__wrp").show();
+						$(component.getTrait("gradienttype").el).parents(".vj-trt-trait__wrp").show();
+						$(component.getTrait("angle").el).parents(".vj-trt-trait__wrp").show();
 
-						$(component.getTrait("backgroundcolor").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("backgroundimage").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imageposition").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imageattachment").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagerepeat").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagesize").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundcolor").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundimage").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imageposition").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imageattachment").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagerepeat").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagesize").el).parents(".vj-trt-trait__wrp").hide();
 
-						$(component.getTrait("backgroundvideo").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundvideo").el).parents(".vj-trt-trait__wrp").hide();
 						component.components().forEach(item => item.getAttributes()["data-bg-video"] == 'true' ? item.remove() : null);
 
 						$(component.getTrait("gradienttype").el).find('input#linear').prop('checked', true);
@@ -1015,19 +1015,19 @@ export default (editor, config = {}) => {
 					}
 					else if (event.target.value == "video") {
 
-						$(component.getTrait("backgroundcolor").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("backgroundimage").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imageposition").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imageattachment").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagerepeat").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagesize").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundcolor").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundimage").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imageposition").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imageattachment").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagerepeat").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagesize").el).parents(".vj-trt-trait__wrp").hide();
 
-						$(component.getTrait("gradient").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("gradienttype").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("angle").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("gradient").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("gradienttype").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("angle").el).parents(".vj-trt-trait__wrp").hide();
 
 						$(component.getTrait("backgroundvideo").el).removeAttr("style");
-						$(component.getTrait("backgroundvideo").el).parents(".gjs-trt-trait__wrp").show();
+						$(component.getTrait("backgroundvideo").el).parents(".vj-trt-trait__wrp").show();
 
 						var target = VjEditor.getSelected()
 						window.document.vj_video_target = target;
@@ -1037,18 +1037,18 @@ export default (editor, config = {}) => {
 					}
 					else {
 
-						$(component.getTrait("backgroundcolor").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("backgroundimage").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imageposition").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imageattachment").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagerepeat").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("imagesize").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundcolor").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundimage").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imageposition").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imageattachment").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagerepeat").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("imagesize").el).parents(".vj-trt-trait__wrp").hide();
 
-						$(component.getTrait("gradient").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("gradienttype").el).parents(".gjs-trt-trait__wrp").hide();
-						$(component.getTrait("angle").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("gradient").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("gradienttype").el).parents(".vj-trt-trait__wrp").hide();
+						$(component.getTrait("angle").el).parents(".vj-trt-trait__wrp").hide();
 
-						$(component.getTrait("backgroundvideo").el).parents(".gjs-trt-trait__wrp").hide();
+						$(component.getTrait("backgroundvideo").el).parents(".vj-trt-trait__wrp").hide();
 						component.components().forEach(item => item.getAttributes()["data-bg-video"] == 'true' ? item.remove() : null);
 
 					}
@@ -1063,11 +1063,11 @@ export default (editor, config = {}) => {
 						gp.setType(event.target.value);
 
 						if (event.target.value == 'radial') {
-							$(component.getTrait("angle").el).parents(".gjs-trt-trait__wrp").hide();
+							$(component.getTrait("angle").el).parents(".vj-trt-trait__wrp").hide();
 							gp.setDirection('center center');
 						}
 						else if (event.target.value == 'linear') {
-							$(component.getTrait("angle").el).parents(".gjs-trt-trait__wrp").show();
+							$(component.getTrait("angle").el).parents(".vj-trt-trait__wrp").show();
 							$(component.getTrait("angle").el).find('input').val('90');
 							gp.setDirection('90deg');
 						}
@@ -1358,7 +1358,7 @@ export default (editor, config = {}) => {
 			colorPicker.appendChild(thisColorPicker());
 			el.appendChild(colorPicker);
 
-			var colorField = el.querySelectorAll('.colorPicker .gjs-field-color-picker');
+			var colorField = el.querySelectorAll('.colorPicker .vj-field-color-picker');
 
 			$(colorField).click(function () {
 
@@ -1383,7 +1383,7 @@ export default (editor, config = {}) => {
 
 				CustomColor();
 
-				var BGcolor = $(this).find(".gjs-field-color-picker").css("background-color");
+				var BGcolor = $(this).find(".vj-field-color-picker").css("background-color");
 				$(this).parents(".color-wrapper").find(".colorPicker").css("background-color", BGcolor);
 
 				var classes = [];
@@ -1423,7 +1423,7 @@ export default (editor, config = {}) => {
 
 				CustomColor();
 
-				var orignalColor = $(el).find('.gjs-field-color-picker').css('background-color');
+				var orignalColor = $(el).find('.vj-field-color-picker').css('background-color');
 				$(el).find(".colorPicker").css("background-color", orignalColor);
 
 				VjEditor.runCommand("save");
@@ -1453,9 +1453,9 @@ export default (editor, config = {}) => {
 				var customColor = component.getStyle()[property].replace("!important", "");
 
 				if (customColor != "transparent") {
-					elInput.querySelector('.gjs-field-color-picker').style.backgroundColor = customColor;
+					elInput.querySelector('.vj-field-color-picker').style.backgroundColor = customColor;
 					elInput.parentElement.style.backgroundColor = customColor
-					editor.$(elInput.querySelector('.gjs-field-color-picker')).spectrum("set", customColor);
+					editor.$(elInput.querySelector('.vj-field-color-picker')).spectrum("set", customColor);
 
 					$(elInput.parentElement).addClass('active').css('background-color', customColor);
 				}
@@ -1464,15 +1464,15 @@ export default (editor, config = {}) => {
 			if (component.attributes.type == 'icon') {
 
 				if (elInput.parentElement.parentElement.firstElementChild.name == "framecolor" && component.getTrait('frame').getInitValue() == "none")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 
 				if (elInput.parentElement.parentElement.firstElementChild.name == "backgroundcolor" && component.getTrait('background').getInitValue() == "empty")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 
 			if (component.attributes.type == 'section') {
 				if (elInput.parentElement.parentElement.firstElementChild.name == "backgroundcolor" && (component.getTrait('background').getInitValue() == "none" || component.getTrait('background').getInitValue() == "gradient" || component.getTrait('background').getInitValue() == "video"))
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 		},
 		eventCapture: ['input'],
@@ -1605,13 +1605,13 @@ export default (editor, config = {}) => {
 
 			if (component.attributes.type == 'icon') {
 				if ((elInput.firstElementChild.name == "framewidth" || elInput.firstElementChild.name == "framegap") && component.getTrait('frame').getInitValue() == "none")
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 
 			if (component.attributes.type == 'section') {
 				if (elInput.firstElementChild.name == "angle") {
 					if (component.getTrait('background').getInitValue() != "gradient" || (component.getTrait('background').getInitValue() == "gradient" && component.getTrait('background').getInitValue() == "radial"))
-						$(elInput).parents(".gjs-trt-trait__wrp").hide();
+						$(elInput).parents(".vj-trt-trait__wrp").hide();
 				}
 			}
 		},
@@ -1666,13 +1666,13 @@ export default (editor, config = {}) => {
 		},
 		onUpdate({ elInput, component }) {
 			if (component.attributes.type == 'list' && elInput.firstElementChild.name == "start" && component.getTrait('list_type').getInitValue() == "ul") {
-				$(elInput).parents(".gjs-trt-trait__wrp").hide();
+				$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 			else if (component.attributes.type == 'carousel') {
 				if (component.getTrait('automatically').getInitValue() == 'automaticallyfalse')
-					$(elInput).parents('.gjs-trt-trait__wrp').hide();
+					$(elInput).parents('.vj-trt-trait__wrp').hide();
 				else
-					$(elInput).parents('.gjs-trt-trait__wrp').show();
+					$(elInput).parents('.vj-trt-trait__wrp').show();
 			}
 		},
 		eventCapture: ['input'],
@@ -1724,10 +1724,10 @@ export default (editor, config = {}) => {
 					comp.set({ 'thumbnail': '', 'src': '' });
 
 					$(comp.getTrait("backgroundimage").el).removeAttr("style");
-					$(comp.getTrait("imageposition").el).parents(".gjs-trt-trait__wrp").hide();
-					$(comp.getTrait("imageattachment").el).parents(".gjs-trt-trait__wrp").hide();
-					$(comp.getTrait("imagerepeat").el).parents(".gjs-trt-trait__wrp").hide();
-					$(comp.getTrait("imagesize").el).parents(".gjs-trt-trait__wrp").hide();
+					$(comp.getTrait("imageposition").el).parents(".vj-trt-trait__wrp").hide();
+					$(comp.getTrait("imageattachment").el).parents(".vj-trt-trait__wrp").hide();
+					$(comp.getTrait("imagerepeat").el).parents(".vj-trt-trait__wrp").hide();
+					$(comp.getTrait("imagesize").el).parents(".vj-trt-trait__wrp").hide();
 				}
 				else if ($(ev.target).parents(".uploader-wrapper").attr("id") == "backgroundvideo") {
 
@@ -1743,9 +1743,9 @@ export default (editor, config = {}) => {
 		onUpdate({ elInput, component }) {
 			if (component.attributes.type == 'section') {
 				if (elInput.firstElementChild.name == "backgroundimage" && (component.getTrait('background').getInitValue() == "none" || component.getTrait('background').getInitValue() == "gradient" || component.getTrait('background').getInitValue() == "video"))
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 				else if (elInput.firstElementChild.name == "backgroundvideo" && (component.getTrait('background').getInitValue() == "none" || component.getTrait('background').getInitValue() == "image" || component.getTrait('background').getInitValue() == "gradient"))
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 			}
 		},
 		eventCapture: ['input'],
@@ -1799,13 +1799,13 @@ export default (editor, config = {}) => {
 		onUpdate({ elInput, component }) {
 			if (component.attributes.type == 'section') {
 				if ((elInput.id == "imageposition" || elInput.id == "imageattachment" || elInput.id == "imagerepeat" || elInput.id == "imagesize") && (component.getTrait('background').getInitValue() == "none" || component.getTrait('background').getInitValue() == "gradient" || component.getTrait('background').getInitValue() == "video"))
-					$(elInput).parents(".gjs-trt-trait__wrp").hide();
+					$(elInput).parents(".vj-trt-trait__wrp").hide();
 
 				if (component.attributes["thumbnail"] == "") {
-					$(component.getTrait("imageposition").el).parents(".gjs-trt-trait__wrp").hide();
-					$(component.getTrait("imageattachment").el).parents(".gjs-trt-trait__wrp").hide();
-					$(component.getTrait("imagerepeat").el).parents(".gjs-trt-trait__wrp").hide();
-					$(component.getTrait("imagesize").el).parents(".gjs-trt-trait__wrp").hide();
+					$(component.getTrait("imageposition").el).parents(".vj-trt-trait__wrp").hide();
+					$(component.getTrait("imageattachment").el).parents(".vj-trt-trait__wrp").hide();
+					$(component.getTrait("imagerepeat").el).parents(".vj-trt-trait__wrp").hide();
+					$(component.getTrait("imagesize").el).parents(".vj-trt-trait__wrp").hide();
 				}
 			}
 		},
@@ -1880,7 +1880,7 @@ export default (editor, config = {}) => {
 		},
 		onUpdate({ elInput, component }) {
 			if (component.attributes.type == 'section' && component.getTrait('background').getInitValue() != "gradient")
-				$(elInput).parents(".gjs-trt-trait__wrp").hide();
+				$(elInput).parents(".vj-trt-trait__wrp").hide();
 
 			if (component.getTrait('background').getInitValue() == "gradient" && (component.getStyle()['background-image'] != "" || component.getStyle()['background-image'] != "none")) {
 				const gp = this.gp;

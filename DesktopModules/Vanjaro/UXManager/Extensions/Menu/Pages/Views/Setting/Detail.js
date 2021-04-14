@@ -381,9 +381,9 @@ app.controller('setting_detail', function ($scope, $routeParams, CommonSvc, Swee
                                 $(window.parent.document.body).find('#VJBtnPublish').addClass('disabled');
 
                             if (data.data.Data.IsContentApproval && data.data.Data.IsLocked)
-                                $(window.parent.document.body).find('.gjs-cv-canvas__frames').addClass('lockcanvas');
+                                $(window.parent.document.body).find('.vj-cv-canvas__frames').addClass('lockcanvas');
                             else
-                                $(window.parent.document.body).find('.gjs-cv-canvas__frames').removeClass('lockcanvas');
+                                $(window.parent.document.body).find('.vj-cv-canvas__frames').removeClass('lockcanvas');
 
                         }
                         var ParentScope = parent.document.getElementById("iframe").contentWindow.angular;

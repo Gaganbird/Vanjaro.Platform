@@ -33,7 +33,7 @@
     "node-sass": "4.14.1",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0"
+    "webpack-dev-server": "3.11.2"
   },
   "dependencies": {
     "grapesjs": "0.16.45",

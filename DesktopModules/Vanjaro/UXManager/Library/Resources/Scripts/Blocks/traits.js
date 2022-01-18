@@ -30,6 +30,24 @@ export default (editor, config = {}) => {
 		VjEditor.select(selected);
 	});
 
+    cmd.add('txt-delete', {
+        run(editor, sender, opts = {}) {
+            const selected = VjEditor.getSelected() || opts.target;
+            selected.remove();
+            VjEditor.select();
+        }
+    });
+
+    cmd.add('txt-clone', editor => {
+
+        const selected = VjEditor.getSelected();
+        var clone = selected.clone();
+        selected.parent().append(clone);
+
+        VjEditor.select();
+        VjEditor.select(selected);
+    });
+
 	cmd.add('vj-delete', {
 		run(editor, sender, opts = {}) {
 

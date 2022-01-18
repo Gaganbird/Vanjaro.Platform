@@ -130,7 +130,34 @@ export default (editor, config = {}) => {
 	});
 
 	domc.addType('text-inner', {
-		model: textModel.extend({
+        model: textModel.extend({
+            initToolbar() {
+                var model = this;
+                if (!model.get('toolbar')) {
+                    var tb = [];
+
+                    tb.push({
+                        attributes: { class: 'fa fa-arrow-up' },
+                        command: function (t) {
+                            return t.runCommand("core:component-exit", {
+                                force: 1
+                            })
+                        }
+                    });
+
+                    tb.push({
+                        attributes: { class: 'fa fa-clone' },
+                        command: 'txt-clone',
+                    });
+                    
+                    tb.push({
+                        attributes: { class: 'fa fa-trash-o' },
+                        command: 'txt-delete',
+                    });
+
+                    model.set('toolbar', tb);
+                }
+            },
 			defaults: Object.assign({}, textModel.prototype.defaults, {
 				droppable: false,
 				'custom-name': 'Text Inner',
